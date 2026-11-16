@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coin Collector Premium Edition Google</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #4B3542, #2A1E25);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: gold;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.85;
+}
+
+.search-box {
+    width: 600px;
+    max-width: 90vw;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+}
+
+.search-box:focus {
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.time {
+    margin-top: 25px;
+    font-size: 2rem;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">🪙 Coin Collector Premium Edition Google</div>
+    <div class="subtitle">Find rare coins, collections, and treasures</div>
+
+    <form action="https://www.google.com/search" method="GET">
+        <input
+            class="search-box"
+            type="text"
+            name="q"
+            placeholder="Search Google..."
+            autocomplete="off">
+    </form>
+
+    <div class="time" id="clock"></div>
+</div>
+
+<script>
+function updateClock() {
+    const now = new Date();
+    document.getElementById('clock').textContent =
+        now.toLocaleTimeString();
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
